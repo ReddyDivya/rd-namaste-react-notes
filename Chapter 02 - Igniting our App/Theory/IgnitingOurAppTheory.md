@@ -20,7 +20,7 @@
 - Read about: `^` - `caret` and `~` - `tilde`
 - Read about `Script types in html` (MDN Docs)
 
-## Project Assignment:
+## Coding
 - In your `existing project`
     - initialize `npm` into your `repo`
     - install `react` and `react-dom`
