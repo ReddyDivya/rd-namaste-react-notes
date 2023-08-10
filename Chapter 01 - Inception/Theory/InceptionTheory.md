@@ -37,7 +37,7 @@
 ## Q: What is `Emmet`?
 A: `Emmet` is a powerful toolkit for web developers and designers that greatly enhances their HTML and CSS workflow. It helps in writing code more quickly and efficiently by providing shortcuts for common HTML and CSS patterns. 
 ### **i) HTML Expansion**: Emmet allows us to quickly generate HTML code by using abbreviations.
-For instance, **div>ul>li.item$*3**
+For instance, `div>ul>li.item$*3`
 ```
 <div>
     <ul>
@@ -48,12 +48,12 @@ For instance, **div>ul>li.item$*3**
 </div>
 ```
 ### **ii) CSS Abbreviations**: Emmet also supports expanding CSS abbreviations
-For instance, **m10**
+For instance, `m10`
 ```
 margin: 10px;
 ```
 ### iii) Nested Elements: We can use > to nest elements within each other. 
-For instance, **ul>li*3** would generate an unordered list with three list items.
+For instance, `ul>li*3` would generate an unordered list with three list items.
 ```
 <ul>
     <li></li>
@@ -63,7 +63,7 @@ For instance, **ul>li*3** would generate an unordered list with three list items
 ```
 
 ### iv) Siblings: We can use + to create sibling elements. 
-For instance, **div+p+bq** would create a div, followed by a p, and then a blockquote.
+For instance, `div+p+bq` would create a div, followed by a p, and then a blockquote.
 ```
 <div></div>
 <p></p>
@@ -71,7 +71,7 @@ For instance, **div+p+bq** would create a div, followed by a p, and then a block
 ```
 
 ### v) Multiplication: We can use the * operator to create multiple elements. 
-For instance, **ul>li*5** would generate an unordered list with five list items.
+For instance, `ul>li*5` would generate an unordered list with five list items.
 ```
 <ul>
     <li></li>
@@ -83,7 +83,7 @@ For instance, **ul>li*5** would generate an unordered list with five list items.
 ```
 
 ### vi) Numbering: Use $ to indicate a number that should be incremented in each subsequent item. 
-For instance, **ul>li.item$*3** would create list items with classes item1, item2, and item3.
+For instance, `ul>li.item$*3` would create list items with classes item1, item2, and item3.
 ```
 <ul>
     <li class="item1"></li>
@@ -93,7 +93,7 @@ For instance, **ul>li.item$*3** would create list items with classes item1, item
 ```
 
 ### vii) Grouping: Parentheses can be used to group elements. 
-For instance, **ul>(li.item$*2>a{Item $})*3** would generate a list with nested items and anchor tags.
+For instance, `ul>(li.item$*2>a{Item $})*3` would generate a list with nested items and anchor tags.
 ```
 <ul>
     <li class="item1">
