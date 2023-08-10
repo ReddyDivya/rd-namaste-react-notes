@@ -125,8 +125,17 @@ A `Framework` is a structured, pre-designed architecture that provides a foundat
 For instance, Angular is a front-end framework developed by Google.
 Angular is used for building dynamic and feature-rich web applications, particularly single-page applications (SPAs).
 
-## What is `CDN`? Why do we `use` it?
-A: 
+## Q: What is `CDN`? Why do we `use` it?
+A: `CDN` stands for Content Delivery Network. It is a network of distributed servers located in various data centers around the world.
+The primary purpose of a CDN is to deliver web content, such as images, videos, scripts, stylesheets, and other static or dynamic resources, to users more efficiently and with higher performance.
+A CDN solves this problem by replicating the website's content on multiple servers spread across various geographic locations. When a user requests a specific piece of content, the CDN automatically routes the request to the nearest server in its network. This way, the content is delivered from a server closer to the user, reducing latency and ensuring faster loading times.
+
+### Key benefits of using a CDN include:
+- **Improved website performance:** Faster load times and reduced latency leads to a better user experience, lower bounce rates, and higher engagement.
+- **Scalability:** CDNs can handle large amounts of traffic and distribute it across their network, reducing the load on the origin server.
+
+## Q: Why is `React known as React`?
+
 
 
 
