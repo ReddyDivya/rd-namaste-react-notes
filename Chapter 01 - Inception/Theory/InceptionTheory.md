@@ -117,10 +117,16 @@ A: A `Library` is a collection of pre-written code that provides specific functi
 For instance, React.js is a JavaScript library developed by Facebook.
 React is primarily concerned with rendering UI components and managing their state and updates. It can be integrated into different project setups and combined with other libraries to create complete applications.
 
+A `Framework` is a structured, pre-designed architecture that provides a foundation for building an entire application. It dictates the overall structure, flow, and design patterns of the application.
+- **Control**: When using a framework, the developer gives up some control over the application's structure and flow. The framework enforces certain conventions and rules that the developer must follow.
+- **Usage**: Frameworks are used to build entire applications. They provide a foundation and a set of tools to handle various aspects of application development, such as routing, database interactions, user authentication, etc.
+- **Inversion of Control**: In a framework, control is often inverted, meaning the framework controls parts of the application's flow. Developers extend or customize the framework's components to build the application's logic.
 
+For instance, Angular is a front-end framework developed by Google.
+Angular is used for building dynamic and feature-rich web applications, particularly single-page applications (SPAs).
 
-
-
+## What is `CDN`? Why do we `use` it?
+A: 
 
 
 
