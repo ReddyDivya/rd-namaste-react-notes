@@ -38,3 +38,9 @@
 - Parcel Documentation
 - Parcel on Production
 - [BrowsersList](https://browserslist.dev/)
+
+## Q What is `npm`?
+A:  npm is like a magic toolbox for JavaScript programmers. It helps them find and use ready-made pieces of code (packages) made by other people. These packages can do all sorts of things, like adding special features to websites or making it easier to write code. With npm, programmers can easily get these packages and use them in their own projects without having to build everything from scratch. It's like borrowing tools instead of making them all by yourself.
+
+## Q What's `Parcel/Webpack`? Why do we need it?
+A: 
