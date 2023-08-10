@@ -108,6 +108,19 @@ For instance, `ul>(li.item$*2>a{Item $})*3` would generate a list with nested it
 </ul>
 ```
 
+## Q: Difference between a `Library and Framework`?
+A: A `Library` is a collection of pre-written code that provides specific functionalities or features. It is designed to be reused across different projects to save development time and effort.
+- **Control**: When using a library, the developer maintains more control over the overall structure and flow of the application. The developer decides when and how to use the library's components and functions.
+- **Usage**: Libraries are generally used to solve specific tasks or provide utilities. They are often "called" by the developer's code to perform specific actions or computations.
+- **Inversion of Control**: In a library, the developer controls the flow of the application. The library doesn't dictate the overall structure or architecture of the application.
+
+For instance, React.js is a JavaScript library developed by Facebook.
+React is primarily concerned with rendering UI components and managing their state and updates. It can be integrated into different project setups and combined with other libraries to create complete applications.
+
+
+
+
+
 
 
 
