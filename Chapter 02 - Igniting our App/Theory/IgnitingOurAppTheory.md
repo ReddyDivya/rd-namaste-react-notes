@@ -118,3 +118,16 @@ Parcel will start processing your project, bundling and optimizing your files. I
 ### View the Result:
 Once Parcel has finished bundling your project, it will provide you with a local development server address (usually `http://localhost:1234` by default). Open this address in your web browser to see your bundled application.
 
+## Q What is the difference between `devDependencies` and `dependencies`?
+A: `dependencies` 
+Packages listed under dependencies are the ones that your application needs to run correctly in production. These are the dependencies that your application relies on to function as intended when it's in the hands of end-users. They are necessary for the core functionality of your application.
+**Example**: If you're building a web app with React, React itself would be listed under dependencies because it's essential for your app to work properly.
+
+`devDependencies`
+Packages listed under devDependencies are used for development purposes only. They are tools, libraries, or other packages that help you during the development process, such as build tools, and testing frameworks. These dependencies are not required for your application to run in a production environment and won't be included when your application is deployed.
+**Example**: A testing library like Jest or a development server like Parcel would be listed under devDependencies because they are used for development and testing but are not necessary for the deployed application.
+
+The distinction between dependencies and devDependencies allows you to separate what's essential for your application to function (production) from what's necessary for your development workflow
+
+
+
