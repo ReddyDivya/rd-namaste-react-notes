@@ -129,5 +129,8 @@ Packages listed under devDependencies are used for development purposes only. Th
 
 The distinction between dependencies and devDependencies allows you to separate what's essential for your application to function (production) from what's necessary for your development workflow
 
+## Q What is `Tree Shaking`?
+A: `Tree shaking` is a technique used in modern JavaScript build tools to eliminate unused code from your final bundle. It's a process that helps optimize the size of your JavaScript bundles, resulting in smaller file sizes and faster loading times for your web applications. The term "tree shaking" comes from the idea of "shaking out" or removing dead branches from a tree. In the context of code, it refers to identifying and removing parts of your codebase that are never used or referenced, effectively pruning away unnecessary portions.
+- During the build process, the tool (like Webpack, Parcel) analyzes your JavaScript code and its dependencies, creating a "dependency graph" that represents the relationships between different modules.
 
 
