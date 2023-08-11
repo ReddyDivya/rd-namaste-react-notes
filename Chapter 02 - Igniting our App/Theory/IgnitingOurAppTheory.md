@@ -42,6 +42,13 @@
 ## Q What is `npm`?
 A:  npm is like a magic toolbox for JavaScript programmers. It helps them find and use ready-made pieces of code (packages) made by other people. These packages can do all sorts of things, like adding special features to websites or making it easier to write code. With npm, programmers can easily get these packages and use them in their own projects without having to build everything from scratch. It's like borrowing tools instead of making them all by yourself.
 
+## Q What is a `bundler`?
+A: A `bundler` is a tool used in web development to combine multiple separate files, such as JavaScript, CSS, and images, into a smaller number of optimized files. These optimized files, known as bundles, are designed to be more efficient for browsers to load, improving the performance of web applications.
+- Bundlers help manage dependencies between files, ensuring that they are included in the correct order and that any redundant code is eliminated. This process not only speeds up the loading of web pages but also aids in organizing and maintaining a project's codebase.
+- In addition to bundling, many modern bundlers offer features like minification (removing unnecessary characters to make files smaller), transpilation (converting newer code syntax to older versions for wider compatibility), and code splitting (breaking code into smaller chunks to load only what's needed for each page).
+
+Webpack, Parcel, and Rollup are examples of popular bundlers used in web development.
+
 ## Q What's `Webpack`? Why do we need it?
 A: Webpack is a bundler tool that bundles your web project's files together. It optimizes and organizes JavaScript, CSS, images, and more, making them load faster for websites. It manages file dependencies, converts code for different browsers, and uses plugins to enhance performance. This tool also supports splitting code into smaller parts, loading only what's needed. For development, it offers a server that automatically updates changes. In a nutshell, Webpack streamlines web development by packaging, optimizing, and simplifying the way files are delivered to browsers.
 
