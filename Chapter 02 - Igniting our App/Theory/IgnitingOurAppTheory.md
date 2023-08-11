@@ -93,3 +93,28 @@ A: `Webpack` and `Parcel` are both tools used for bundling and managing assets i
 
  Webpack offers more control and customization, while Parcel prioritizes simplicity and speed.
 
+## Q What is `.parcel-cache`?
+A: The .parcel-cache directory is created by the Parcel bundler when it processes and builds your web project. It serves as a cache storage location to optimize the performance of subsequent builds.
+- When you run Parcel to bundle your project, it analyzes your source files, applies transformations (like minification and code splitting), and generates output files in a distribution directory. The .parcel-cache directory stores intermediate files, cached assets, and compiled code from previous builds. This helps to speed up future builds by reusing previously processed content, as opposed to reprocessing everything from scratch.
+- The cache directory is automatically managed by Parcel, and you generally don't need to interact with it directly. However, in case you encounter any issues with your builds, clearing the cache can sometimes resolve certain problems.
+- Remember that clearing the cache might lead to slightly longer build times for the first build after cache deletion, but subsequent builds should benefit from improved performance due to the cached data.
+
+## Q What is `npx`?
+A: `npx` is a command-line tool that comes with npm (Node Package Manager) and is used to run Node.js packages. It's often used to execute packages that are not globally installed on your system. The primary purpose of npx is to make it easier to run packages without having to install them globally or clutter your project's dependencies.
+### Install Parcel (Optional): 
+If you haven't already installed Parcel globally or locally in your project, you can skip this step. When using npx, you don't need to have Parcel installed globally or listed as a dependency in your package.json.
+
+### Run Parcel with npx:
+Open your terminal and navigate to the root directory of your project. 
+Run the following command using npx and specify parcel as the package name:
+```
+npx parcel index.html
+```
+Replace index.html with the entry file of your project, which is the HTML file that serves as the starting point for your application.
+
+### Parcel Processing:
+Parcel will start processing your project, bundling and optimizing your files. It will automatically detect dependencies and apply the necessary transformations.
+
+### View the Result:
+Once Parcel has finished bundling your project, it will provide you with a local development server address (usually `http://localhost:1234` by default). Open this address in your web browser to see your bundled application.
+
