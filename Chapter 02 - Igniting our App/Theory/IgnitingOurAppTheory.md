@@ -204,7 +204,6 @@ build/
 - Documentation (e.g., `README.md`)
 - Build Files Needed for Deployment
 
-
 ## Q What is the difference between `package.json` and `package-lock.json`?
 A: 
 
