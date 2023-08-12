@@ -133,4 +133,22 @@ The distinction between dependencies and devDependencies allows you to separate 
 A: `Tree shaking` is a technique used in modern JavaScript build tools to eliminate unused code from your final bundle. It's a process that helps optimize the size of your JavaScript bundles, resulting in smaller file sizes and faster loading times for your web applications. The term "tree shaking" comes from the idea of "shaking out" or removing dead branches from a tree. In the context of code, it refers to identifying and removing parts of your codebase that are never used or referenced, effectively pruning away unnecessary portions.
 - During the build process, the tool (like Webpack, Parcel) analyzes your JavaScript code and its dependencies, creating a "dependency graph" that represents the relationships between different modules.
 
+## Q What is `Hot Module Replacement`?
+A: `HMR` is a technique that allows developers to make changes to their codebase and see those changes instantly reflected in the running application without requiring a full page refresh or a manual reload of the browser.
+
+`Change Detection`: When you make changes to your code (such as modifying a JavaScript file or updating a CSS style), the HMR system detects these changes.
+
+`Patch and Apply`: Instead of reloading the entire page or application, HMR takes the modified module (JavaScript, CSS, or other assets) and patches the changes into the running application in real-time.
+
+`Preserve State`: HMR is designed to preserve the application's current state. This means that if you're in the middle of a certain interaction or have some data stored in memory, those states will remain intact even after applying the code changes.
+
+`Selective Updates`: HMR is capable of updating only the changed modules, which helps in reducing the need for a full page reload and speeds up the development process.
+
+## Q Does Parcel bundler have HMR?
+A:  Parcel is another popular bundler that comes with built-in Hot Module Replacement (HMR) functionality. Parcel is designed to be a zero-config bundler, which means you can set up a project without needing an extensive configuration file like you might with Webpack.
+To use HMR with Parcel, you don't need to do any additional setup. It's enabled by default when you run the development server.
+
+Parcel will automatically detect your application's entry point and set up the development server with HMR enabled. When you make changes to your React components, styles, or other assets, Parcel will apply those changes in real-time without requiring a full page reload.
+
+
 
