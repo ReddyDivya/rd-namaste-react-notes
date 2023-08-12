@@ -150,5 +150,35 @@ To use HMR with Parcel, you don't need to do any additional setup. It's enabled 
 
 Parcel will automatically detect your application's entry point and set up the development server with HMR enabled. When you make changes to your React components, styles, or other assets, Parcel will apply those changes in real-time without requiring a full page reload.
 
+## Q List down your `favorite 5 superpowers of Parcel` and `describe any 3` of them in your own words
+A: ### Configuration:
+Parcel follows a zero-config approach, meaning it requires minimal to no configuration. It automatically detects and bundles assets without extensive setup, making it simpler for beginners.
+
+### Ease of Use: 
+Parcel is designed for simplicity and ease of use. Its zero-config approach makes it quick to start with and is well-suited for small to medium projects without complex requirements.
+
+### Customization:
+While it's less customizable than Webpack, Parcel's simplicity and zero-config approach make it suitable for projects where rapid development and simplicity are priorities
+
+### Use Cases:
+Ideal for smaller to medium-sized projects, prototypes, or beginners who want a straightforward setup without delving into extensive configuration.
+
+### Hot Module Replacement (HMR): 
+The parcel comes with a built-in HMR. This allows you to see instant updates to your code as you make changes, enhancing your development workflow and speeding up iteration times.
+
+### Optimized Output: 
+In production mode, Parcel automatically optimizes your assets for performance. It minifies JavaScript and CSS, generates cache-busting filenames, and applies other optimizations to ensure a faster loading experience for users.
+
+### Code Splitting: 
+The parcel can automatically analyze your code and create optimized bundles with code splitting. This helps reduce initial load times by only delivering the code necessary for the current page or functionality.
+
+### Efficient Caching: 
+Parcel utilizes a sophisticated caching mechanism that speeds up subsequent builds by reusing cached data from previous builds. This can significantly reduce build times during development.
+
+### Easy Deployment: 
+With the optimized output it generates, deploying Parcel-built applications is straightforward. You can host your assets on a server or deploy them to various hosting platforms.
+
+## Q What is `.gitignore`? What should `we add` and `not add` into it?
+A: 
 
 
