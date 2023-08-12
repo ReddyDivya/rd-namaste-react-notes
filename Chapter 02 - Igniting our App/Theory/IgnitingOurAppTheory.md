@@ -13,7 +13,7 @@
 - What is `.gitignore`? What should `we add` and `not add` into it?
 - What is the `difference` between `package.json` and `package-lock.json`
 - Why should I not modify `package-lock.json`?
-- What is `node_modules` ? Is it a `good idea to push that on git`?
+- What is `node_modules`? Is it a `good idea to push that on git`?
 - What is the `dist` folder?
 - What is `browserlists`
 - Read about `dif bundlers`: `vite`, `webpack`, `parcel`
@@ -179,6 +179,31 @@ Parcel utilizes a sophisticated caching mechanism that speeds up subsequent buil
 With the optimized output it generates, deploying Parcel-built applications is straightforward. You can host your assets on a server or deploy them to various hosting platforms.
 
 ## Q What is `.gitignore`? What should `we add` and `not add` into it?
-A: 
+A: `.gitignore` is a configuration file used in Git repositories to specify which files and directories should be ignored by the version control system. This file helps prevent certain files or types of files from being tracked by Git, which is particularly useful for excluding files that are generated during the development process, contain sensitive information, or are not relevant to the project's version history.
+
+### What to Add to .gitignore:
+- Generated Files: Files that are generated during the build process, such as compiled code, transpiled JavaScript, or build artifacts.
+- Dependencies: Node.js node_modules directory, Python __pycache__ directories, and other dependency folders.
+- Sensitive Information: Configuration files that contain sensitive data like API keys, credentials, or passwords.
+- Logs and Reports: Log files, error reports, or debug outputs.
+- Output Files: Any files that are generated from source files, like transpiled JavaScript, minified CSS, or compressed images.
+- Temporary Files
+- 
+```
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build artifacts
+dist/
+build/
+```
+
+### What Not to Add to .gitignore:
+- Source Code
+- Configuration Templates (e.g., `config.example.json`)
+- Documentation (e.g., `README.md`)
+- Build Files Needed for Deployment
+
+
 
 
