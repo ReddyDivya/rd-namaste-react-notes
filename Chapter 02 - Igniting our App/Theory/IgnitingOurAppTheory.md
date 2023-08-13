@@ -277,3 +277,45 @@ Built-in support for hot module replacement.
 Suitable for simple projects and fast prototyping.
 Provides a simple command-line interface.
 
+## Q Read about: ^ - caret and ~ - tilde
+A: In the context of versioning in software development, the caret (^) and tilde (~) symbols are used to specify version ranges for dependencies in files like package.json when working with package managers like npm or yarn.
+
+`Caret (^)`:
+When you use the caret symbol (^) in front of a version number, it indicates that you want to allow updates to the package as long as the major version remains the same. In semantic versioning (semver), versions are represented as MAJOR.MINOR.PATCH.
+
+### For example:
+^1.2.3 allows updates to any version within the 1.x.x range.
+^0.3.2 allows updates to any version within the 0.3.x range.
+The caret symbol is more aggressive than the tilde symbol and is often used for libraries that follow semver closely. It allows for the inclusion of bug fixes and minor features while avoiding major version changes.
+
+`Tilde (~)`:
+The tilde symbol (~) is used to specify a version range that allows updates to a package as long as the most recent version is within the same minor version range. In other words, it permits updates as long as the patch version is incremented.
+
+### For example:
+~1.2.3 allows updates to any version within the 1.2.x range, but not beyond that.
+The tilde symbol is generally more conservative than the caret symbol and is used when you want to ensure that only bug fixes are included without introducing new features.
+
+Both the caret and tilde symbols are used to strike a balance between ensuring a level of stability while still allowing for updates and bug fixes. The choice between them depends on your project's requirements and how much flexibility you want in terms of accepting updates.
+
+## Q Read about Script types in html (MDN Docs)
+A: The term `Script types` in the context of HTML refers to the attribute type used in the <script> element. This attribute specifies the MIME type of the script, which helps the browser understand how to interpret and execute the script code. However, please note that HTML and web development practices can evolve, so I recommend checking the latest documentation on the MDN Web Docs for the most up-to-date information.
+
+Here's a brief overview of how the type attribute is used with <script> elements:
+JavaScript (text/javascript): This is the most common value used for the type attribute. It indicates that the content of the <script> element is JavaScript code. However, starting from HTML5, you can omit the type attribute altogether for JavaScript, as browsers assume it's JavaScript by default.
+
+### Example:
+```
+<script>
+    // JavaScript code here
+</script>
+```
+
+`Module Script (module)`: This value is used to indicate that the script is a JavaScript module, which allows you to use features like import and export to organize your code into reusable modules. Modules are loaded asynchronously and have a different scope compared to traditional scripts.
+
+### Example:
+```
+<script type="module">
+    import { functionName } from './module.js';
+    // JavaScript module code here
+</script>
+```
