@@ -1,0 +1,115 @@
+/* Header component starts */
+.header{
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    padding:5px;
+    margin:5px;
+}
+
+.logo{
+    width:100px;
+    height:100px;
+}
+
+.nav-items{
+    display:flex;
+}
+
+.nav-items > ul{
+    display:flex;
+    flex-wrap:wrap;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+    padding:5px;
+}
+/* Header component ends */
+
+/* Restaurant card component starts */
+.body{
+    padding:5px;
+    margin:5px;
+    border:1px solid #000;
+}
+
+.res-search{
+    border:1px solid #000;
+    padding:5px;
+    margin:5px;
+}
+
+.res-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.res-logo{
+    width:100%;
+    height:150px;
+}
+
+.res-card{
+    border:1px solid #000;
+    padding:5px;
+    margin:5px;
+    width:200px;;
+}
+/* Restaurant card component ends */
+
+/* Shimmer cards */
+.shimmer-container{
+    display: flex;
+    flex-wrap:wrap;
+    border:1px solid #000;
+    margin:5px;
+}
+
+.shimmer-cards{
+    width:190px;
+    height:190px;
+    border:1px solid #f5f2f2;
+    padding:5px;
+    margin:5px;
+    background-color: #f5f2f2;
+}
+
+.login-btn{
+    width:60px;
+    height:30px;
+    cursor: pointer;
+}
+
+/* Restaurant Menu starts here*/
+
+.res-header{
+    display:flex;
+}
+
+.res-rating{
+    position: absolute;
+    right:0;
+    margin:8px;
+    padding:0px;
+    height:20%;
+    color:green;
+    border: 1px solid #686161;
+    border-radius: 5px;
+}
+
+.res-rating > h4{
+    color: #686161;
+}
+
+.res-deliveryInfo{
+    display: flex;
+}
+
+.res-deliveryInfo > h3{
+    margin:5px;
+}
+
+.res-recomends > ul{
+    list-style-type: none;
+}
