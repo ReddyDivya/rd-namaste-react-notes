@@ -21,36 +21,36 @@ const RestaurantMenu = () => {
     const {itemCards} = resMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
 
     return ( 
-    <section className="m-4 p-4">
-        <h1 className="font-bold text-4xl pl-3">Menu</h1>
-        <div className="bg-slate-200 m-4 p-4">
+    <section>
+        <h1>Menu</h1>
+        <div>
             <section>
                 <div>
-                    <h1 className="text-4xl text-slate-500">{name}</h1>
-                    <p className="pt-1 text-lg text-slate-500">{cuisines.join(", ")} </p>
-                    <p className="pt-1 text-lg text-slate-500">{locality}</p>
+                    <h1>{name}</h1>
+                    <p>{cuisines.join(", ")} </p>
+                    <p>{locality}</p>
                 </div>
-                <div className="res-rating">
-                    <h2 className="pt-1 text-lg text-slate-500">⭐{avgRating}</h2>
+                <div>
+                    <h2>⭐{avgRating}</h2>
                     <hr/>
-                    <h4 className="pt-1 text-lg text-slate-500">{totalRatingsString}</h4>
+                    <h4>{totalRatingsString}</h4>
                 </div>
             </section>
             <hr/>
             <section>
-                <h3 className="pt-1 text-lg text-slate-500">🕗{deliveryTime}</h3>
-                <p className="pt-1 text-lg text-slate-500">💵{costForTwoMessage}</p>
+                <h3>🕗{deliveryTime}</h3>
+                <p>💵{costForTwoMessage}</p>
             </section>
             <hr/>
             <section>
-                <h2 className="pt-3 font-bold text-slate-700 text-3xl">Recommended ({itemCards.length})</h2>
+                <h2>Recommended ({itemCards.length})</h2>
                 <ul>
                 {
                     itemCards.map((item) => (
                         <li key={item.card.info.id}>
-                            <h3 className="pt-1 text-lg text-slate-500">
+                            <h3>
                                 {item.card.info.name} 
-                                &nbsp; - &nbsp;<span className="pt-1 text-lg text-slate-400">{" Rs."} {item.card.info.price/100 || item.card.info.defaultPrice/100}</span>
+                                &nbsp; - &nbsp;<span>{" Rs."} {item.card.info.price/100 || item.card.info.defaultPrice/100}</span>
                             </h3>
                             
                         </li>
