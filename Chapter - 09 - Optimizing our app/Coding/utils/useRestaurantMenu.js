@@ -2,25 +2,24 @@ import {useState, useEffect} from "react";
 import {SWIGGY_MENU_API_URL} from "../utils/constant";
 
 //This custom hook is responsible for fetching restaurant info which is a single responsible.
-const useRestaurantMenu = () => {
-    const [resInfo, setResInfo] = useState(null);//holds a restaurant details
+const useRestaurantMenu = (resId) => {
+    const [resMenu, setResMenu] = useState(null);//holds a restaurant's menu
 
     //calls only once after the initial component render
-    useEffect( () => {
-        //fetch restaurants data
-        getRestaurantsInfo();
-    }, [])
+    useEffect(() => {
+        getRestaurantMenu();
+    }, []);
 
-    //get restaurant details
-    const getRestaurantsInfo = async () => {
-        const restaurantData = await fetch(SWIGGY_MENU_API_URL);
-        const jsonResData = await restaurantData.json();
+    //get restaurant's menu details
+    const getRestaurantMenu = async () => {
+        const restaurantData = await fetch(SWIGGY_MENU_API_URL + resId);//fetching menu data
+        const jsonResData = await restaurantData.json();//converting fetched data to json
+        
+        //set restaurant's menu
+        setResMenu(jsonResData.data);
+    }//getRestaurantMenu
 
-        //set restaurants
-        setResInfo(jsonResData.data);
-    }
-
-    return resInfo;
+    return resMenu;
 };//useRestaurantMenu
 
 export default useRestaurantMenu;
