@@ -6,55 +6,61 @@ const RestaurantMenu = () => {
     const {resId} = useParams();//call useParam to get value of restaurant Id(resId) using object destructuring.
     
     //fetching restaurant info from custom hook (useRestaurantMenu)
-    const {resInfo} = useRestaurantMenu(resId);
+    const resMenu = useRestaurantMenu(resId);
 
-    if(resInfo === null) return <Shimmer/>;
+    if(resMenu === null) return <Shimmer/>;
 
-    //destructuring the restaurant info
+    //destructuring the restaurant's menu details
     const {name, cuisines, costForTwoMessage, locality, avgRating, totalRatingsString
-    } = resInfo?.cards[0]?.card?.card?.info;
-    const {deliveryTime} = resInfo?.cards[0]?.card?.card?.info.sla;
-    
-    console.log(resInfo?.cards[0]?.card?.card?.info)
+    } = resMenu?.cards[0]?.card?.card?.info;
+
+    //order delivery details
+    const {deliveryTime} = resMenu?.cards[0]?.card?.card?.info.sla;
 
     //menu
-    const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
-    // console.log(itemCards);
-    return ( 
-    <div className="res-details">
-        <section className="res-header">
-            <div>
-                <h1>{name}</h1>
-                <p>{cuisines.join(", ")} </p>
-                <p>{locality}</p>
-            </div>
-            <div className="res-rating">
-                <h2>⭐{avgRating}</h2>
-                <hr/>
-                <h4>{totalRatingsString}</h4>
-            </div>
-        </section>
-        <hr/>
-        <section className="res-deliveryInfo">
-            <h3>🕗{deliveryTime}</h3>
-            <p>💵{costForTwoMessage}</p>
-        </section>
-        <hr/>
-        <section className="res-recomends">
-            <h2>Recommended ({itemCards.length})</h2>
-            <ul>
-            {
-                itemCards.map((item) => (
-                    <li key={item.card.info.id}>
-                        <h3>{item.card.info.name}</h3>
-                        <p>{" Rs."} {item.card.info.price/100 || item.card.info.defaultPrice/100}</p>
-                    </li>
-                ))
-            }
-            </ul>
-        </section>
-    </div>)
+    const {itemCards} = resMenu?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
 
+    return ( 
+    <section className="m-4 p-4">
+        <h1 className="font-bold text-4xl pl-3">Menu</h1>
+        <div className="bg-slate-200 m-4 p-4">
+            <section>
+                <div>
+                    <h1 className="text-4xl text-slate-500">{name}</h1>
+                    <p className="pt-1 text-lg text-slate-500">{cuisines.join(", ")} </p>
+                    <p className="pt-1 text-lg text-slate-500">{locality}</p>
+                </div>
+                <div className="res-rating">
+                    <h2 className="pt-1 text-lg text-slate-500">⭐{avgRating}</h2>
+                    <hr/>
+                    <h4 className="pt-1 text-lg text-slate-500">{totalRatingsString}</h4>
+                </div>
+            </section>
+            <hr/>
+            <section>
+                <h3 className="pt-1 text-lg text-slate-500">🕗{deliveryTime}</h3>
+                <p className="pt-1 text-lg text-slate-500">💵{costForTwoMessage}</p>
+            </section>
+            <hr/>
+            <section>
+                <h2 className="pt-3 font-bold text-slate-700 text-3xl">Recommended ({itemCards.length})</h2>
+                <ul>
+                {
+                    itemCards.map((item) => (
+                        <li key={item.card.info.id}>
+                            <h3 className="pt-1 text-lg text-slate-500">
+                                {item.card.info.name} 
+                                &nbsp; - &nbsp;<span className="pt-1 text-lg text-slate-400">{" Rs."} {item.card.info.price/100 || item.card.info.defaultPrice/100}</span>
+                            </h3>
+                            
+                        </li>
+                    ))
+                }
+                </ul>
+            </section>
+        </div>
+    </section>
+    )
 }
 
 export default RestaurantMenu;
