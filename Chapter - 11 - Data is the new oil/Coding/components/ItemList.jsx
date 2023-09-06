@@ -6,7 +6,7 @@ const ItemList = ({items}) => {
   //add food item
   const handleAddItem = (item) => {
 
-  }//handleAddItem 
+  }//handleAddItem
 
   return (
     <div>
@@ -37,7 +37,7 @@ const ItemList = ({items}) => {
                         ADD
                     </button>
                 </div>
-                <img src={CDN_URL + item.card.info.imageId} className="w-full"/>
+                {item.card.info.imageId && <img src={CDN_URL + item.card.info.imageId} className="w-full"/>}
             </div>    
         </div>      
         ))}
