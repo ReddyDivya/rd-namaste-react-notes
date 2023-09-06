@@ -2,7 +2,7 @@ import React, {lazy, Suspense} from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/About";
+// import About from "./components/About";
 import Error from "./components/Error";
 import Contacts from "./components/Contacts";
 import Loading from './components/Loading';
@@ -11,6 +11,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 
 //on demand lazy loading while clicking on Grocery for making it as a small bundler, check it in dist folder
 const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
     /*
@@ -39,7 +40,9 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <About/>,
+                element: <Suspense fallback={<Loading/>}>
+                    <About/>
+                </Suspense>,
             },
             {
                 path: "/grocery",
