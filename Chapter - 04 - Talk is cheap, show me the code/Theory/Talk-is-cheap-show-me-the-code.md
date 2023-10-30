@@ -144,6 +144,32 @@ In short,
 - Split work into chunks and prioritize tasks based on importance.
 ---
 
+### Q: Why do we need keys in React?
+A: In React, the key prop is used to help React identify and differentiate between elements in a collection, such as when rendering a list of components or elements. `Keys` are essential for efficient and reliable rendering, and they serve several important purposes:
+
+`Performance` - React uses keys to optimize the update process. When a component in a collection is modified, React can use the keys to identify exactly which item changed. This enables React to update only the changed component in the virtual DOM and minimize the number of DOM manipulations required, which significantly improves performance.
+
+`Preventing Reordering` - Keys ensure that the order of elements in a collection remains consistent. Without keys, React may not be able to distinguish between elements effectively, leading to unintended reordering when elements are added, removed, or modified. Keys help maintain the desired order of elements.
+
+`Maintaining Component State` - When we have stateful components in a list, using keys is crucial. Without keys, the component instances may not be properly reused or preserved when the list changes, potentially leading to unexpected behavior and the loss of component state.
+
+`Accessibility` - When dealing with lists or collections of elements, having unique and consistent keys can improve the accessibility of our application. It helps screen readers and assistive technologies provide a more meaningful experience to users.
+
+`Child Component Identity` - In some cases, we may need to interact with child components directly. Keys provide a way to reference and interact with specific child components within a parent component.
+
+**Example** :
+
+```
+<li key={0}>HTML</li>
+<li key={1}>CSS</li>
+<li key={2}>JavaScript</li>
+<li key={3}>React</li>
+```
+---
+
+
+
+
 
 
 
