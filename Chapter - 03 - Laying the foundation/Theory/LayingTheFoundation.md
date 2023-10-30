@@ -9,8 +9,9 @@ Here's a simple example of JSX:
 ```
 const element = <h1>Hello, JSX!</h1>;
 ```
-In the above code, looks like HTML, but it's JSX.
-When this code is transpiled, it turns into JavaScript code that creates a React element, which can be rendered in a React application.
+
+In the above code, looks like HTML, but it's JSX. When this code is transpiled, it turns into JavaScript code that creates a React element, which can be rendered in a React application.
+
 ---
 
 ### Q Rules of JSX
