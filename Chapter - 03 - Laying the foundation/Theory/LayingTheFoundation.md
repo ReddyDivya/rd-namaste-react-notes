@@ -71,7 +71,33 @@ A: **Integration of HTML-like Syntax**: JSX allows us to write code that looks l
 - JSX is easy to maintain and debug.
 ---
 ### Q: Role of type attribute in a script tag? What options can I use there?
-A: 
+A: The type attribute in a <script> tag is used to specify the media type of the script content. It tells the browser how to interpret the script. There are a few different values you can use with the type attribute:
+**Omitted or Empty String**: If the type attribute is omitted or set to an empty string (type=""), the browser will assume the default JavaScript type, which is **text/javascript**. This is the most commonly used type for JavaScript, and it's supported by all modern browsers.
+**Example:**
+```
+<script>
+    // JavaScript code here
+</script>
+```
+**"text/javascript" (Deprecated)**: While it used to be the default and widely used, specifying type="text/javascript" is no longer necessary in modern web development. Browsers assume the script is JavaScript by default. You can still use it for compatibility reasons, but it's not required.
+
+Example:
+```
+<script type="text/javascript">
+    // JavaScript code here
+</script>
+```
+**"module"**: When we specify type="module", the script is treated as an ECMAScript module. This value tells the browser that the script is a module that can import or export other files or modules inside it.
+**Example**:
+```
+<script type="module">
+    // JavaScript module code here
+</script>
+```
+**text/babel**: This value indicates that the script is a babel type and requires the Babel JavaScript compiler to transpile JSX code.
+**text/typescript**: The script is written in TypeScript.
+---
+
 
 
 
