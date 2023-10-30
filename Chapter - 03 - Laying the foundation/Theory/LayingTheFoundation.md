@@ -106,3 +106,44 @@ A: The type attribute in a <script> tag is used to specify the media type of the
 `text/typescript`: The script is written in TypeScript.
 
 ---
+
+### Q: `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in `JSX`
+A: `{TitleComponent}` - This expression is used when we want to embed a component as a javascript expression or a variable.
+**Example:**
+```
+const TitleComponent = <h1>Hello, JSX!</h1>;
+
+const App = () => {
+    return (
+        <div>
+            {TitleComponent}
+        </div>
+    );
+};
+```
+
+`{<TitleComponent/>}` - This expression creates and renders an instance of the **TitleComponent** component.
+It's the most common way to use a component in JSX when we want to render the component as part of your UI. Most commonly, you will use {<TitleComponent/>} to create and render a component.
+
+**Example**
+```
+const TitleComponent = () => <h1>Hello, JSX!</h1>;
+
+const App = () => {
+    return (
+        <div>
+            <TitleComponent />
+        </div>
+    );
+};
+```
+
+`{<TitleComponent></TitleComponent>}` - This is essentially the same as `{<TitleComponent/>}` in most cases. Both create and render an instance of the **TitleComponent** component. The explicit use of opening and closing tags might be used in situations where we want to include child elements within the TitleComponent.
+**Example:**
+```
+<TitleComponent>
+    <Header />
+    <MainContainer/>
+    <SecondContainer/>
+</TitleComponent>
+```
