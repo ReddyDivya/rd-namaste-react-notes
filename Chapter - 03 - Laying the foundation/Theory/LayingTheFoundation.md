@@ -3,7 +3,7 @@
 ## Theory Assignment Solutions
 
 ### Q: What is JSX?
-A: JSX stands for "JavaScript XML", It allows developers to write HTML-like code in JavaScript without writing createElement in React which makes React code more confusing and inefficient. JSX is not part of React. JSX makes it easier to add HTML in React. JSX converts HTML code into JavaScript code that React can understand and renders in the DOM. React developers prefer the conciseness of JSX.
+A: JSX stands for `JavaScript XML`, It allows developers to write HTML-like code in JavaScript without writing createElement in React which makes React code more confusing and inefficient. JSX is not part of React. JSX makes it easier to add HTML in React. JSX converts HTML code into JavaScript code that React can understand and renders in the DOM. React developers prefer the conciseness of JSX.
  
 Here's a simple example of JSX:
 ```
