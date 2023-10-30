@@ -46,3 +46,104 @@ However, using ES6 or a more recent version of JavaScript has several advantages
 
 However, adopting ES6 and modern JavaScript practices is generally recommended for a more productive and maintainable React development experience.
 ---
+### Q: How can I write `comments` in JSX?
+A: You can write comments in JSX using curly braces {} and JavaScript-style comments within them. 
+`Single-Line Comments` - We can use JavaScript's single-line comment syntax within curly braces. This is useful for adding comments on a single line within your JSX code.
+
+**Example:**
+```
+<div>
+    {/* This is a single-line comment */}
+    <p>Hello, World!</p>
+</div>
+```
+
+`Multi-Line Comments` - If we want to add multi-line comments within our JSX code, we can use JavaScript's block comment syntax within curly braces.
+
+**Example:**
+```
+<div>
+    {/*
+        This is a multi-line comment.
+        You can use it for longer explanations.
+    */}
+    <p>Hello, World!</p>
+</div>
+```
+It's important to note that these comments are for documentation and readability purposes and do not appear in the final rendered HTML. They are stripped out during the compilation of JSX into JavaScript, so they won't affect the behavior of your application.
+---
+
+### Q: What is `<React.Fragment></React.Fragment>` and `<></>`?
+A: Both `<React.Fragment></React.Fragment>` and `<></>` are used in React to define `fragments`. Fragments are a way to group multiple children without adding an extra DOM element. They are often used when we need to return multiple elements from a component's render method but don't want to wrap them in a container element like <div>. Making our code cleaner and more semantically meaningful. 
+
+1. `<React.Fragment></React.Fragment>` 
+We can use the `<React.Fragment>` component to create a fragment in our JSX. This is especially useful when we need to return multiple elements, but we don't want to introduce a wrapping container element in our rendered output. We can also add key and other props to the fragment.
+
+**Example:**
+```
+import React from 'react';
+
+function MyComponent() {
+    return (
+        <React.Fragment>
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+        </React.Fragment>
+    );
+}
+```
+
+2. `<></> (Short Syntax, introduced in React 16.2)`
+The short syntax `<></>` is a more concise way to create fragments in React. It has the same purpose as `<React.Fragment>`, but it doesn't require the React import, and it's often preferred for brevity.
+
+Example:
+```
+function MyComponent() {
+    return (
+        <>
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+        </>
+    );
+}
+```
+---
+### Q: What is `Reconciliation` in React?
+A: `Reconciliation` in React refers to the process by which React updates the DOM (Document Object Model) to match the most recent state of the application. React uses a virtual representation of the DOM called the "Virtual DOM" to efficiently update the actual DOM. 
+Reconciliation is the algorithmic process of comparing the previous virtual DOM with the current one and making the necessary changes to bring the actual DOM in sync with the application's state.
+
+Here's how the reconciliation process works in React
+1. `Render Phase` - During the render phase, React creates a virtual representation of the component tree. This virtual tree is called the Virtual DOM. React elements are created for each component and its children, representing the component's structure and content.
+
+2. `Reconciliation Phase` - When there's a change in the component's state or props, a new virtual tree is created. React then performs a process called `reconciliation` to compare the new virtual tree with the previous one.
+
+React uses a `diffing algorithm` to identify the differences (or "diffs") between the new and previous virtual trees.
+It determines which parts of the virtual tree need to be updated in the actual DOM to reflect the changes in the component's state or props.
+React aims to minimize the number of actual DOM operations to make the update as efficient as possible.
+
+3. `Commit Phase` - After identifying the differences in the virtual tree, React applies the necessary changes to the actual DOM. This is called the `commit phase`. During this phase, React updates the DOM to reflect the changes in the virtual tree. The updates are batched and performed efficiently to minimize browser repaints and reflows.
+
+`Reconciliation` is a critical aspect of React's performance optimization. 
+---
+### Q: What is `React Fiber`?
+A: `React Fiber`, often referred to simply as `Fiber` is an internal and ongoing reimplementation of the React reconciliation algorithm. It was introduced by the React team to address some limitations and performance bottlenecks in the original reconciliation 
+process.
+
+The primary goals of React Fiber are:
+`Improved Rendering` - Fiber introduces a new, more efficient algorithm for rendering components. It allows React to break down rendering work into smaller units and prioritize the work more effectively. This enables React to be more responsive, especially in high-load and concurrent rendering scenarios.
+
+`Incremental Rendering` - Fiber enables React to perform rendering incrementally, `pausing` and `resuming` work as needed. This means that React can work on rendering parts of the component tree without blocking the main thread, resulting in smoother and more responsive user interfaces.
+
+`Concurrent Mode` - Fiber introduced the concept of Concurrent Mode, which allows React to handle multiple tasks and updates concurrently. It prioritizes user interactions and ensures that they are not blocked by rendering tasks, improving the user experience.
+
+`Support for Async Rendering` - With Fiber, React can handle asynchronous rendering tasks more effectively, enabling features like suspense and lazy loading of components.
+
+In short,
+- Pause, resume, and restart rendering work on components as new updates come in.
+- Reuse previously completed work and even abort it if not needed.
+- Split work into chunks and prioritize tasks based on importance.
+---
+
+
+
+
