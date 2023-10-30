@@ -94,8 +94,10 @@ Example:
     // JavaScript module code here
 </script>
 ```
+
 **text/babel**: This value indicates that the script is a babel type and requires the Babel JavaScript compiler to transpile JSX code.
 **text/typescript**: The script is written in TypeScript.
+
 ---
 
 
