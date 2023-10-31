@@ -277,4 +277,6 @@ Key aspects of a `Config-Driven UI` include:
 The exact implementation of a config-driven UI can vary depending on the technology and tools being used. In web development, this approach is often combined with front-end frameworks or libraries to render the UI based on the provided configuration. It provides the flexibility needed to create highly adaptable and user-customizable interfaces.
 
 **Example**
-Offers in the Delivery apps differ from city to city where offer data come from a database.
+
+- Offers in the Delivery apps differ from city to city where offer data come from a database.
+- Restaurants in the Delivery apps differ from city to city where offer data comes from a database.
