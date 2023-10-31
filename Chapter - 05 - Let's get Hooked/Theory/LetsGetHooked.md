@@ -57,3 +57,165 @@ The choice between these export methods depends on our use case and coding style
 ---
 
 ### Q: What is the importance of `config.js` file?
+A: A `config.js` file, often referred to as a `configuration file`, is important in software development for several reasons:
+`Separation of Concerns` - Config files help separate configuration data from the actual code of an application. This makes our code more modular, maintainable, and easier to manage. When configuration settings change, you can update the config file without altering the code.
+
+Environment Variables: Many applications use config.js files to store environment-specific settings. By using environment variables in your configuration file, you can ensure that your application behaves differently in development, testing, and production environments. This is crucial for security, database connections, and other settings that may change depending on the environment.
+
+---
+
+### Q: What are React Hooks?
+A: `React Hooks` is a feature introduced in React 16.8 to allow functional components to manage state and side effects without the need for class components. They provide a more concise and easier-to-understand way to work with component state and lifecycle methods.
+
+Several built-in hooks serve different purposes in a React application. Here are some of the most commonly used ones:
+
+1 `useState` - This hook allows us to add a state to your functional components. We can use it to declare and manage component-specific state variables.
+```
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+2 `useEffect` - This hook enables you to perform side effects in your components, such as data fetching, subscriptions, or manually changing the DOM. It's the functional equivalent of the componentDidMount, componentDidUpdate, and `componentWillUnmount` lifecycle methods in class components.
+```
+import React, { useEffect, useState } from 'react';
+
+function DataFetching() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Fetch data and update the state
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  return (
+    <ul>
+      {data.map(item => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+3 `useContext` - This hook allows us to access the context in our component tree. It's used to consume context values provided by a `Context.Provider`.
+```
+import React, { useContext } from 'react';
+import MyContext from './MyContext';
+
+function MyComponent() {
+  const value = useContext(MyContext);
+
+  return <div>Context Value: {value}</div>;
+}
+```
+
+4 `useReducer` - This hook is an alternative to useState for managing more complex state. It's often used when we need to manage state transitions in a predictable way, such as when building forms.
+```
+import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>Increment</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>Decrement</button>
+    </div>
+  );
+}
+```
+
+These are just a few of the commonly used React Hooks. Hooks make it easier to reuse logic across components, keep components more focused, and simplify the code structure of functional components in React applications.
+
+---
+
+5 `useRef` - It is a React Hook that provides a way to create and access mutable references to a DOM element or a value that persists across renders in a functional component. It's particularly useful for accessing and interacting with DOM elements directly or for storing values that you don't want to trigger a re-render when they change.
+
+Here are some common use cases for useRef:
+
+`Accessing DOM elements` - We can use useRef to get a reference to a DOM element and then manipulate it directly. For example, we can focus on an input field or measure the size of an element.
+
+```
+import React, { useRef, useEffect } from 'react';
+
+function MyComponent() {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  return <input ref={inputRef} />;
+}
+```
+
+---
+
+### Q: Why do we use `useState` Hook?
+A: The `useState` Hook is an essential part of React because it allows functional components to manage and update their local state. State management is a fundamental concept in React, as it enables components to store and update data that affects their behavior and appearance. 
+
+Here are some key reasons why the useState Hook is used:
+
+`Local Component State` - useState allows functional components to maintain their own local state. This state is isolated to the component and doesn't affect or interfere with the state of other components. This is crucial for building self-contained and reusable components.
+
+`Reactive Updates` - When we use useState, React automatically handles re-rendering the component when the state changes. This means that when we call setState (the function returned by useState), React efficiently updates the component's user interface to reflect the new state. This reactivity is a core feature of React and simplifies UI development.
+
+`Functional Components` - Before the introduction of Hooks in React, state management was primarily achieved in class components using the `this.state` and `this.setState` mechanisms. With Hooks, functional components can now have their own state, making them more powerful and easier to work with. This reduces the need for class components in many cases.
+
+`Declarative Programming` - Using useState promotes a declarative style of programming. Instead of directly manipulating the DOM or managing state changes imperatively, we declare how our UI should look based on the current state. React takes care of updating the DOM to match the desired state.
+
+`Easy to Understand` - useState provides a simple and intuitive way to add and update state in functional components. We can see the current state and its updates in one place, making it easier to understand and maintain our code.
+
+Here's a basic example of how to use the useState Hook to manage state in a functional component:
+```
+import React, { useState } from 'react';
+
+function Counter() {
+  // Declare a state variable 'count' with an initial value of 0.
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    // Update the 'count' state by calling 'setCount'.
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+```
+
+In this example, useState is used to create and manage the 'count' state variable. When the button is clicked, it triggers a state update, and React re-renders the component to reflect the new state. This is the core mechanism for creating interactive and dynamic user interfaces in React.
+
+---
+
+
