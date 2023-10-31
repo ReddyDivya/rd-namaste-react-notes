@@ -27,6 +27,7 @@ class App extends React.Component {
 While JSX is not mandatory, it is highly recommended for most React development because it provides a more natural and expressive way to define the structure of your components and is widely adopted by the React community. JSX is also the approach you will find in most React documentation and tutorials.
 
 ---
+
 ### Q: Is ES6 mandatory for React?
 A: `ES6 (ECMAScript 2015)` is not mandatory for React, but it is highly recommended and widely used in React development. React itself does not require ES6, and we can write React applications using older versions of JavaScript, such as ES5. 
 However, using ES6 or a more recent version of JavaScript has several advantages:
@@ -48,6 +49,7 @@ However, using ES6 or a more recent version of JavaScript has several advantages
 However, adopting ES6 and modern JavaScript practices is generally recommended for a more productive and maintainable React development experience.
 
 ---
+
 ### Q: How can I write `comments` in JSX?
 A: You can write comments in JSX using curly braces {} and JavaScript-style comments within them. 
 `Single-Line Comments` - We can use JavaScript's single-line comment syntax within curly braces. This is useful for adding comments on a single line within your JSX code.
@@ -78,9 +80,10 @@ It's important to note that these comments are for documentation and readability
 ---
 
 ### Q: What is `<React.Fragment></React.Fragment>` and `<></>`?
-A: Both `<React.Fragment></React.Fragment>` and `<></>` are used in React to define `fragments`. Fragments are a way to group multiple children without adding an extra DOM element. They are often used when we need to return multiple elements from a component's render method but don't want to wrap them in a container element like <div>. Making our code cleaner and more semantically meaningful. 
+A: Both `<React.Fragment></React.Fragment>` and `<></>` are used in React to define `fragments`. Fragments are a way to group multiple children without adding an extra DOM element. They are often used when we need to return multiple elements from a component's render method but don't want to wrap them in a container element like div. 
+Making our code cleaner and more semantically meaningful. 
 
-1. `<React.Fragment></React.Fragment>` 
+1 `<React.Fragment></React.Fragment>` 
 We can use the `<React.Fragment>` component to create a fragment in our JSX. This is especially useful when we need to return multiple elements, but we don't want to introduce a wrapping container element in our rendered output. We can also add key and other props to the fragment.
 
 **Example:**
@@ -112,6 +115,7 @@ function MyComponent() {
 }
 ```
 ---
+
 ### Q: What is `Reconciliation` in React?
 A: `Reconciliation` in React refers to the process by which React updates the DOM (Document Object Model) to match the most recent state of the application. React uses a virtual representation of the DOM called the "Virtual DOM" to efficiently update the actual DOM. 
 Reconciliation is the algorithmic process of comparing the previous virtual DOM with the current one and making the necessary changes to bring the actual DOM in sync with the application's state.
@@ -128,7 +132,9 @@ React aims to minimize the number of actual DOM operations to make the update as
 3. `Commit Phase` - After identifying the differences in the virtual tree, React applies the necessary changes to the actual DOM. This is called the `commit phase`. During this phase, React updates the DOM to reflect the changes in the virtual tree. The updates are batched and performed efficiently to minimize browser repaints and reflows.
 
 `Reconciliation` is a critical aspect of React's performance optimization. 
+
 ---
+
 ### Q: What is `React Fiber`?
 A: `React Fiber`, often referred to simply as `Fiber` is an internal and ongoing reimplementation of the React reconciliation algorithm. It was introduced by the React team to address some limitations and performance bottlenecks in the original reconciliation 
 process.
@@ -146,6 +152,7 @@ In short,
 - Pause, resume, and restart rendering work on components as new updates come in.
 - Reuse previously completed work and even abort it if not needed.
 - Split work into chunks and prioritize tasks based on importance.
+
 ---
 
 ### Q: Why do we need keys in React?
@@ -189,6 +196,7 @@ Here are some key points to consider when using the index as keys:
 In general, it's a better practice to use stable and unique identifiers as keys whenever possible. For dynamic lists of items fetched from a database or an external data source, it's recommended to use unique IDs associated with each item. If you don't have access to unique IDs, consider generating unique keys based on the content of the items or using other methods to ensure that keys are both stable and unique.
 
 While using the index as keys can be a quick solution for simple and static lists, it's crucial to be aware of its limitations and potential issues in more complex and dynamic scenarios. Always consider the specific requirements and characteristics of our application when deciding on the appropriate keying strategy.
+
 ---
 
 ### Q: What is `props` in React? Ways to
@@ -244,7 +252,9 @@ function ChildComponent(props) {
 
 export default ChildComponent;
 ```
+
 In this example, the ParentComponent passes a name prop to the ChildComponent, and the child component displays a message using that prop. This demonstrates the basic use of props in React.
+
 ---
 
 ### Q: What is `Config Driven UI`?
