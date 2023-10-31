@@ -25,6 +25,7 @@ class App extends React.Component {
 }
 ```
 While JSX is not mandatory, it is highly recommended for most React development because it provides a more natural and expressive way to define the structure of your components and is widely adopted by the React community. JSX is also the approach you will find in most React documentation and tutorials.
+
 ---
 ### Q: Is ES6 mandatory for React?
 A: `ES6 (ECMAScript 2015)` is not mandatory for React, but it is highly recommended and widely used in React development. React itself does not require ES6, and we can write React applications using older versions of JavaScript, such as ES5. 
@@ -45,6 +46,7 @@ However, using ES6 or a more recent version of JavaScript has several advantages
 `Template Literals` - Template literals provide a more convenient way to work with strings.
 
 However, adopting ES6 and modern JavaScript practices is generally recommended for a more productive and maintainable React development experience.
+
 ---
 ### Q: How can I write `comments` in JSX?
 A: You can write comments in JSX using curly braces {} and JavaScript-style comments within them. 
@@ -70,7 +72,9 @@ A: You can write comments in JSX using curly braces {} and JavaScript-style comm
     <p>Hello, World!</p>
 </div>
 ```
+
 It's important to note that these comments are for documentation and readability purposes and do not appear in the final rendered HTML. They are stripped out during the compilation of JSX into JavaScript, so they won't affect the behavior of your application.
+
 ---
 
 ### Q: What is `<React.Fragment></React.Fragment>` and `<></>`?
@@ -246,7 +250,7 @@ In this example, the ParentComponent passes a name prop to the ChildComponent, a
 ### Q: What is `Config Driven UI`?
 A: A `Config-Driven UI` (or `Configuration-Driven User Interface`) is an approach to building user interfaces where the structure, behavior, and appearance of the UI components are primarily determined by configuration data or settings, rather than hardcoding these details in the source code. This approach aims to make the user interface more flexible, customizable, and easily maintainable by separating the UI logic from the UI configuration.
 
-Key aspects of a Config-Driven UI include:
+Key aspects of a `Config-Driven UI` include:
 
 `Configuration Data` - The UI components are driven by external configuration files or data, often in a structured format such as JSON, XML, YAML, or other custom formats. These configuration files define properties, layouts, styles, and even interactivity of UI elements.
 
@@ -271,3 +275,6 @@ Key aspects of a Config-Driven UI include:
 `Business Applications`: Enterprise software often uses config-driven UIs to define forms, workflows, and dashboards that can be customized by administrators.
 
 The exact implementation of a config-driven UI can vary depending on the technology and tools being used. In web development, this approach is often combined with front-end frameworks or libraries to render the UI based on the provided configuration. It provides the flexibility needed to create highly adaptable and user-customizable interfaces.
+
+**Example**
+Offers in the Delivery apps differ from city to city where offer data come from a database.
