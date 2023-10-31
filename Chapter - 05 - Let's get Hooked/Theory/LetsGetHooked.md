@@ -57,11 +57,13 @@ The choice between these export methods depends on our use case and coding style
 ---
 
 ### Q: What is the importance of `config.js` file?
-A: A `config.js` file, often referred to as a `configuration file`, is important in software development for several reasons:
-`Separation of Concerns` - Config files help separate configuration data from the actual code of an application. This makes our code more modular, maintainable, and easier to manage. When configuration settings change, you can update the config file without altering the code.
+A: `Config.js` files are text files that hold essential program information. They are structured for user configuration. Many programs, such as office suites and web browsers, rely on menu-driven configurations. These files typically follow a simple structure, often using key-value pairs for settings. For instance, if an application only needs to store a user's preferred name, the config file might look like this:
 
-Environment Variables: Many applications use config.js files to store environment-specific settings. By using environment variables in your configuration file, you can ensure that your application behaves differently in development, testing, and production environments. This is crucial for security, database connections, and other settings that may change depending on the environment.
-
+However, most applications require multiple settings, so config files often contain key-value pairs for various options:
+```
+NAME='Divya'
+SURNAME='Reddy'
+```
 ---
 
 ### Q: What are React Hooks?
