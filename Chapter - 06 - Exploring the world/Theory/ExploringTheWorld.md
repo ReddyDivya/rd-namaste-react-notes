@@ -67,7 +67,10 @@ A:
 | Change Impact | Changes can impact other parts of the application | Changes are isolated and have limited impact |
 | Complexity | Simpler for small applications but can become complex as the application grows | Suitable for complex applications but introduces its own challenges |
 
-   
+![image](https://github.com/ReddyDivya/rd-namaste-react-notes/assets/34181144/b0a72a0b-29f0-4f85-8b72-7f2e03608e4d)
 
+---
+
+### Q: 
 
 
