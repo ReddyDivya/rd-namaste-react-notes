@@ -122,5 +122,129 @@ export default MyComponent;
 
 In this example, the useEffect hook is used to fetch data when the component is mounted, ensuring that the side effect of data fetching occurs at the appropriate time in the component's lifecycle.
 
+---
+
+### Q: What is `Optional Chaining`?
+A: `Optional chaining` is a feature in modern JavaScript that provides a concise and safe way to access properties and methods on potentially null or undefined objects without causing runtime errors. It's denoted by the `?.` syntax and is particularly useful when dealing with `deeply nested object structures` or when we're unsure if a property or method exists.
+
+Here's how optional chaining works:
+
+1 `Accessing Object Properties` - When we use optional chaining to access object properties, it checks if the property we're trying to access exists. If the property is present, it `returns its value; otherwise, it returns undefined`.
+```
+const person = {
+  name: "John",
+  address: {
+    city: "New York",
+  },
+};
+
+const city = person.address?.city; // "New York"
+const country = person.address?.country; // undefined
+```
+
+2 `Invoking Object Methods - We can also use optional chaining to call methods on objects. It ensures the method is called only if it exists.
+```
+const car = {
+  start: function () {
+    console.log("Car started");
+  },
+};
+
+car.start?.(); // "Car started"
+car.stop?.(); // No error, nothing happens (undefined is returned)
+```
+
+3 `Handling Arrays` - Optional chaining can also be used with arrays to access elements by their index. It returns undefined if the index is out of bounds.
+```
+const numbers = [1, 2, 3, 4];
+
+const firstNumber = numbers[0]; // 1
+const fifthNumber = numbers[4]; // undefined
+const lastNumber = numbers[4]?.(); // undefined (not a function)
+```
+
+Optional chaining is especially valuable when working with `API responses, user input, or any scenario where data might be missing or incomplete`. It helps us avoid common runtime errors like "TypeError: Cannot read property 'x' of undefined" and allows us to write more robust and concise code.
+
+---
+
+### Q: What is `Shimmer UI`?
+A: A `Shimmer UI` is a user interface design technique used to indicate that `content is loading or placeholders are being displayed`. It involves creating a subtle animation or visual effect that gives the impression of activity or content rendering, even when the actual content has not yet loaded. Shimmer UIs are often used in applications, websites, or mobile apps to enhance the user experience during loading times.
+
+The key characteristics of Shimmer UIs include:
+
+`Animation` - Shimmer UIs typically involve a `gentle and repetitive animation that creates a shimmering or fading effect`, mimicking the appearance of content gradually appearing on the screen.
+
+`Placeholder Content` - Instead of displaying empty or blank areas where content will eventually appear, a Shimmer UI shows placeholder content that resembles the expected content in terms of layout, structure, and style. This gives users a visual cue about the content that will load.
+
+`Loading State` - Shimmer UIs are used to convey that the application or webpage is in a loading state. This is particularly useful when fetching data from a server, as it provides feedback to users that something is happening in the background.
+
+`User Engagement` - By adding a Shimmer UI, users may feel more engaged and less frustrated during loading times because they receive visual feedback that the app is working to retrieve the data.
+
+Here's a basic example of how a Shimmer UI might be implemented in a React component using CSS for styling:
+```
+import React from 'react';
+import './Shimmer.css';
+
+function ShimmerUI() {
+  return (
+    <div className="shimmer-container">
+      <div className="shimmer-placeholder"></div>
+      <div className="shimmer-placeholder"></div>
+      <div className="shimmer-placeholder"></div>
+    </div>
+  );
+}
+
+export default ShimmerUI;
+```
+
+```
+/* Shimmer.css */
+.shimmer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.shimmer-placeholder {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+```
+
+In this example, the shimmer container holds placeholder elements (shimmer-placeholder) that animate with a shimmer effect, giving the appearance of content loading.
+
+Shimmer UIs are an effective way to enhance the user experience during loading and can help reduce the perception of long wait times, making applications feel more responsive and engaging.
+
+---
+
+### Q: What is the difference between `JS expression` and `JS statement`?
+A: `JavaScript Expression` - An expression is a piece of code that produces a value.
+It can be a single value, a variable, a function call, or a combination of values and operators that result in a value.
+Expressions can be used wherever a value is expected, such as in assignments, function arguments, and within other expressions.
+
+**Examples of expressions:**
+
+
+
+
+
+
+
+
+
+
+
 
 
