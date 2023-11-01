@@ -230,18 +230,179 @@ Shimmer UIs are an effective way to enhance the user experience during loading a
 ---
 
 ### Q: What is the difference between `JS expression` and `JS statement`?
-A: `JavaScript Expression` - An expression is a piece of code that produces a value.
-It can be a single value, a variable, a function call, or a combination of values and operators that result in a value.
-Expressions can be used wherever a value is expected, such as in assignments, function arguments, and within other expressions.
+A: `JavaScript Expression` - An expression is a piece of code that produces a value. It can be a single value, a variable, a function call, or a combination of values and operators that result in a value. Expressions can be used wherever a value is expected, such as in assignments, function arguments, and within other expressions.
 
 **Examples of expressions:**
+```
+5 + 3       // Produces the value 8
+"Hello"     // Produces the string value "Hello"
+myVariable  // Produces the value stored in the variable myVariable
+func(4)     // Calls a function and produces its return value
+```
 
+2 `JavaScript Statement` - A statement is a line of code that performs an action. It doesn't produce a value like an expression. Statements are often used to control the flow of a program, define functions, declare variables, and perform other tasks. Statements can include loops, conditionals, function declarations, and variable assignments.
 
+**Examples of statements**:
+```
+if (x > 10) {
+  // Conditional statement
+  // Executes a block of code if x is greater than 10
+}
 
+for (let i = 0; i < 5; i++) {
+  // Loop statement
+  // Repeats a block of code five times
+}
 
+function greet(name) {
+  // Function declaration statement
+  console.log("Hello, " + name);
+}
 
+let y = 42;  // Variable assignment statement
+```
 
+In summary, expressions produce values and can be used within statements, while statements are used to `control the program's flow`, `define functions`, `declare variables`, and perform actions. Understanding the distinction between `expressions` and `statements` is important when writing JavaScript code because it affects how we structure our code and where we can use different constructs.
 
+---
+
+### Q: What is `Conditional Rendering`? explain with a code example.
+A: `Conditional rendering` in a React application refers to the practice of displaying different content or components based on certain conditions or states. It allows us to control what is rendered in the user interface depending on the values of variables, props, or the application's current state. Conditional rendering is a fundamental concept in building dynamic and interactive user interfaces.
+
+Here's an example of conditional rendering in a React component:
+```
+import React, { useState } from 'react';
+
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return (
+    <div>
+      <h1>Conditional Rendering Example</h1>
+      {isLoggedIn ? (
+        <WelcomeUser />
+      ) : (
+        <Login />
+      )}
+    </div>
+  );
+}
+
+function WelcomeUser() {
+  return (
+    <div>
+      <h2>Welcome, User!</h2>
+      <button>Log Out</button>
+    </div>
+  );
+}
+
+function Login() {
+  return (
+    <div>
+      <h2>Please Log In</h2>
+      <form>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button>Login</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In this example, we have a simple React application with conditional rendering:
+
+- We have a state variable isLoggedIn that determines whether a user is logged in or not. Initially, it's set to false.
+
+- In the App component, we use a conditional rendering technique within the JSX to display different components based on the value of isLoggedIn.
+
+- If isLoggedIn is true, the <WelcomeUser /> component is displayed, welcoming the user.
+- If isLoggedIn is false, the <Login /> component is displayed, prompting the user to log in.
+- The <WelcomeUser /> and <Login /> components represent different parts of the UI that are conditionally rendered based on the state. Depending on the user's login status, one of these components will be displayed.
+
+Conditional rendering is a powerful technique for building responsive and interactive user interfaces in React. It allows us to show or hide content, components, or even entire sections of our application based on user actions, data, or other factors, providing a more personalized and dynamic user experience.
+
+---
+
+### Q What is `CORS`?
+A: When a web page includes resources from different domains, it can introduce security and privacy concerns. Modern web browsers implement the same-origin policy, which restricts web pages from making requests to a different domain than the one that served the web page. This policy is designed to prevent malicious websites from accessing sensitive data from other domains without permission.
+
+---
+
+### Q What is `async` and `await`?
+A: `async` and `await` are JavaScript features that simplify working with `asynchronous code` and `asynchronous operations`, such as making network requests, reading files, or waiting for timeouts. They were introduced in ECMAScript 2017 (ES8) and have become a fundamental part of modern JavaScript, making asynchronous code more readable and manageable.
+
+Here's an overview of async and await:
+
+`async` Function - The async keyword is used to define an asynchronous function. When a `function is declared as async, it always returns a promise`, which can resolve to a value or be rejected with an error.
+Inside an async function, we can use the await keyword to pause the function's execution until a promise is resolved. This allows us to write asynchronous code in a more synchronous style.
+
+```
+async function fetchData() {
+  // This function is asynchronous and returns a promise.
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+
+  return data;
+}
+```
+
+2 `await` Operator - The `await keyword is used inside an async function to pause the execution of the function until a promise is resolved`. It can only be used within an async function. When an await statement is encountered, the function will pause at that point until the awaited promise is settled (resolved or rejected).
+
+3 `Error Handling` - We can use try...catch blocks to handle errors when working with async and await. If an awaited promise is rejected, it will throw an exception that can be caught in a catch block.
+
+```
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+}
+```
+
+4 `Concise and Readable Code` - `async` and `await` make asynchronous code more concise and readable, as it resembles synchronous code flow. This can improve code maintainability and reduce callback hell or "Pyramid of Doom."
+
+`async` and `await` are widely used in JavaScript for handling asynchronous operations, such as `fetching data from APIs`, `reading files`, `making database queries`, and performing other tasks that involve waiting for results. They provide a more structured and clean way to work with asynchronous code compared to using callbacks or promises directly.
+
+---
+
+### Q What is the use of `const json = await data.json();` in `getRestaurants()`?
+A: The line `const json = await data.json();` is used in a function called `getRestaurants()` to convert the response data from a JSON API into a JavaScript object. Let me break down what this line of code does in the context of an asynchronous JavaScript function.
+
+`data` represents the response object from a network request, typically obtained using a library like `fetch or axios`. This response object contains data in a raw format.
+
+`.json()` is a method available on the response object that is used to `extract and parse JSON data` from the response body. It returns a promise that resolves to the parsed JavaScript object.
+
+`await` is used within an async function to pause the execution of the function until the promise returned by data.json() is resolved. This ensures that the function won't proceed until the JSON data is ready to be used.
+
+`const json = ...` declares a constant variable json to hold the parsed JSON data.
+
+So, in the context of a function like getRestaurants(), this line of code waits for the JSON data to be parsed from the response object and assigns it to the json variable, which we can then work with as a JavaScript object. Here's an example:
+
+```
+async function getRestaurants() {
+  try {
+    const response = await fetch('https://api.example.com/restaurants');
+    const data = await response.json(); // Parse the JSON response
+    console.log(data); // You can now use the JSON data as a JavaScript object
+  } catch (error) {
+    console.error('Error fetching restaurant data:', error);
+  }
+}
+
+getRestaurants();
+```
+
+In this example, the data variable contains the parsed JSON data from the API response, and we can access and manipulate this data as needed within the getRestaurants() function.
+
+---
 
 
 
