@@ -262,3 +262,27 @@ This allows us to control when the effect runs based on specific conditions or d
 
 ---
 
+### Q: What is `SPA`?
+A: SPA stands for "Single Page Application." It's a type of web application or website that interacts with the user by dynamically rewriting the current web page rather than loading entire new pages from the server. In other words, a single HTML page is loaded initially, and then the content is updated dynamically as the user interacts with the application, typically through JavaScript.
+
+Key characteristics of SPAs include:
+
+Dynamic Updates: In SPAs, content is loaded and updated without requiring a full page reload. This is achieved using JavaScript and client-side routing.
+
+Smooth User Experience: SPAs can provide a smoother and more responsive user experience because they can update parts of the page without the entire page needing to refresh.
+
+Faster Initial Load: While the initial load of an SPA might take longer as it downloads more JavaScript and assets, subsequent interactions with the application can be faster because only data is exchanged with the server, and not entire HTML pages.
+
+Client-Side Routing: SPAs often use client-side routing to simulate traditional page navigation while staying on the same HTML page. This is typically achieved using libraries like React Router or Vue Router.
+
+API-Centric: SPAs are often designed to be more API-centric, where the client communicates with a backend API to fetch and send data, usually in JSON format. This allows for decoupling the frontend and backend.
+
+State Management: SPAs often use state management libraries (e.g., Redux for React or Vuex for Vue) to manage the application's state and data flow.
+
+Popular JavaScript frameworks and libraries like React, Angular, and Vue are commonly used to build SPAs. They offer tools and patterns to create efficient and maintainable single-page applications.
+
+---
+
+### Q: 
+
+
