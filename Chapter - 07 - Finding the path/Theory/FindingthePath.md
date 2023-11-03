@@ -99,21 +99,27 @@ A: If you use `console.log(useState())` in a React functional component, it will
 ```
 const [count, setCount] = useState(0);
 ```
+
 In this example, **count** is the current state value, and **setCount** is the function to update it.
 
 If we do console.log(useState()), we will see something like this in the console:
+
 ```
 [0, Function]
 ```
+
 The first element of the array is the initial state value (in this case, 0), and the second element is the function to update the state. However, using console.log(useState()) directly in our component without destructuring the array and assigning names to these elements isn't a common or recommended practice. Normally, we would destructure the array elements when using useState() to make our code more readable and maintainable.
 
 So, it's more typical to use useState() like this:
+
 ```
 const [count, setCount] = useState(0);
 console.log(count); // Logs the current state value
 console.log(setCount); // Logs the state update function
 ```
+
 This way, we can access and work with the state and state update function in our component.
+
 ---
 
 ### Q: How will useEffect behave if we don't add a dependency array?
@@ -151,6 +157,7 @@ useEffect(() => {}, []);
 `Case 1, when the dependency array is not included as an argument in the useEffect hook`, the callback function inside useEffect will be executed every time the component is initially rendered and subsequently re-rendered. This means that the effect runs on every render cycle, and there are no dependencies that control when it should or should not execute.
 
 Here's the relevant code again for reference:
+
 ```
 import React, { useEffect } from 'react';
 
@@ -173,6 +180,7 @@ The callback function in the useEffect will log `Effect executed` to the console
 `In Case 2, when the dependency array is empty (i.e., []) in the arguments of the useEffect hook`, the callback function will indeed be executed once during the initial render of the component. However, it won't be limited to the initial render only. It will run after the initial render and then on every re-render of the component.
 
 Here's an example of using `useEffect with an empty dependency array`:
+
 ```
 import React, { useEffect } from 'react';
 
@@ -189,11 +197,11 @@ function MyComponent() {
   );
 }
 ```
-
 
 That's not accurate. In Case 2, when the dependency array is empty (i.e., []) in the arguments of the useEffect hook, the callback function will indeed be executed once during the initial render of the component. However, it won't be limited to the initial render only. It will run after the initial render and then on every re-render of the component.
 
 Here's an example of using useEffect with an empty dependency array:
+
 ```
 import React, { useEffect } from 'react';
 
@@ -210,9 +218,11 @@ function MyComponent() {
   );
 }
 ```
+
 In this case, the callback function in the useEffect with an empty dependency array will run once after the initial render and then on every subsequent re-render of MyComponent. It won't run if the component is unmounted and then re-mounted, but it will run whenever the component is re-rendered, even if there are no dependencies to watch for changes.
 
 If you want the effect to run only once, and not re-run on re-renders, you can specify an empty dependency array like this:
+
 ```
 useEffect(() => {
   // This code will run only once, after the initial render
@@ -225,6 +235,7 @@ In this case, the effect will run only after the initial render, and it won't ru
 `Case 3 - When the dependency array in the arguments of the useEffect hook contains a condition` (a variable or set of variables), the callback function will be executed once during the initial render of the component and also on re-renders if there is a change in the condition.
 
 Here's an example of using `useEffect with a condition in the dependency array`:
+
 ```
 import React, { useEffect, useState } from 'react';
 
@@ -248,23 +259,6 @@ function MyComponent() {
 In this case, the useEffect has count as a dependency in the array. This means that the effect will run after the initial render and then again whenever the count variable changes. If we click the Increment Count button, the count state will change, triggering the effect to run again. If the condition specified in the dependency array doesn't change, the effect won't run on re-renders.
 
 This allows us to control when the effect runs based on specific conditions or dependencies. It's a useful way to ensure that the effect only runs when the relevant data or state has changed.
+
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
