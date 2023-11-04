@@ -71,6 +71,28 @@ Remember that this is just a basic example, and we can customize our routing str
 ### Q: Read about `createHashRouter`, `createMemoryRouter` from React Router docs.
 A: 
 
+---
+
+### Q: What is the `order of life cycle method calls in Class Based Components`?
+A: `Constructor` - The constructor method is the first to be called when a component is created. It's where we typically initialize the component's state and bind event handlers.
+
+`Render` - The render method is responsible for rendering the component's UI. It must return a React element (typically JSX) representing the component's structure.
+
+`ComponentDidMount` - This method is called immediately after the component is inserted into the DOM. It's often used for making AJAX requests, setting up subscriptions, or other one-time initializations.
+
+`ComponentDidUpdate` - This method is called after the component has been updated (re-rendered) due to changes in state or props. It's often used for side effects, like updating the DOM in response to state or prop changes.
+
+`ComponentWillUnmount` - This method is called just before the component is removed from the DOM. It's used to clean up resources or perform any necessary cleanup.
+
+For more reference [React-Lifecycle-methods](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+---
+
+
+
+
+
+
 
 
 
