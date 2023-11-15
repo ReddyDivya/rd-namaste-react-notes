@@ -85,6 +85,8 @@ In this example, the ParentComponent holds the state (count), and it passes both
 
 By lifting the state up to a common ancestor, you centralize the state management, making it easier to control and share state among components. This pattern is especially useful in larger React applications where multiple components need access to the same data or where the state needs to be synchronized across different parts of the application.
 
+[Lifting Stateup](https://legacy.reactjs.org/docs/lifting-state-up.html)
+
 ---
 
 ### Q: What are `Context Provider` and `Context Consumer`?
@@ -154,5 +156,8 @@ class MyProvider extends React.Component {
 ```
 
 In this example, if we don't provide a value to the `MyContext.Provider`, it will use the default value ("Default Value" in this case) specified during the creation of the context. Any component that consumes this context using `MyContext.Consumer` will receive the default value if there is no Provider higher up the tree providing a different value.
+
+
+[React Context](https://legacy.reactjs.org/docs/context.html)
 
 ---
