@@ -1,3 +1,5 @@
+# Chapter 10 - Jo Dikta hai, vo bikta hai
+
 ### Q: Explore all the ways of writing CSS.
 A: 
 ### Using CSS - CSS can be added to HTML documents in 3 ways:
