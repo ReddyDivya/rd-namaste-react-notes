@@ -5,35 +5,6 @@ Namaste React course notes provide concise, hands-on insights into React develop
 # React Interview Questions
   This repository compiles all my react interview question preparations and their corresponding answers.
 
-Top 20 REACT Interview Questions 💼🎯
----
-
-1. How does React Fiber improve performance in React applications?
-2. Explain the concept of code splitting and its benefits in React.
-3. What are the key differences between server-side rendering (SSR) and client-side rendering (CSR) in React?
-4. Describe the concept of render props and their use cases in React.
-5. How can you optimize the rendering of large lists in React?
-
-6. Explain the concept of memoization and its importance in React.
-7. What is the purpose of the useEffect() hook in React and how does it work?
-8. How does React handle routing and navigation?
-9. How can you handle asynchronous operations in React using async/await?
-10. Explain the concept of the Context API in React and its benefits.
-
-11. What is the role of higher-order components (HOC) in React and how can you implement them?
-12. Describe the concept of controlled and uncontrolled components in React forms.
-13. How does React handle state management in large-scale applications?
-14. Explain the concept of suspense in React and its use cases.
-15. What are the different ways to handle side effects in React using hooks?
-
-16. Explain the concept of reconciliation in React.
-17. How can you prevent unnecessary re-renders in React?
-18. What are the different ways to style components in React?
-19. What are the key considerations when implementing a scalable React application?
-20. Describe the concept of reusability, modularity, testability in React components.
-
----
-
 # 📚 [Chapter 01 - Inception](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%2001%20-%20Inception)
 - What is `Emmet`?
 - Difference between a `Library and Framework`?
@@ -79,7 +50,7 @@ own words.
 - `Functional Components`
 - `Composing Components` 
 ---
-# Chapter 04 - Talk is Cheap, show me the code
+## 📚 [Chapter 04 - Talk is Cheap, show me the code](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2004%20-%20Talk%20is%20cheap%2C%20show%20me%20the%20code)
 - Is `JSX` mandatory for React?
 - Is `ES6` mandatory for React?
 - `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in `JSX`.
@@ -92,13 +63,13 @@ own words.
 - What is `props in React`? Ways to.
 - What is `Config Driven UI`?
 ---
-# Chapter 05 - Let's get Hooked!
+## 📚 [Chapter 05 - Let's get Hooked!](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2005%20-%20Let's%20get%20Hooked)
 - What is the `difference` between `Named export`, `Default export`, and `* as export`?
 - What is the `importance` of `config.js` file?
 - What are `React Hooks`?
 - Why do we need `useState Hook`?
 ---
-# Chapter 06 - Exploring the world
+## 📚 [Chapter 06 - Exploring the world](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2006%20-%20Exploring%20the%20world)
 - What is `Microservice`?
 - What is `Monolith architecture`?
 - What is the `difference` between `Monolith and Microservice?
@@ -111,14 +82,14 @@ own words.
 - What is `async and await`?
 - What is the use of `const json = await data.json()`; in `getRestaurants()`?
 ---
-# Chapter 07 - Finding the Path
+## 📚 [Chapter 07 - Finding the Path](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2007%20-%20Finding%20the%20path)
 - What are various ways to `add images` into our App? Explain with `code examples`.
 - What would happen if we do `console.log(useState())`?
 - How will `useEffect` behave if we `don't add` a `dependency array`?
 - What is `SPA`?
 - What is the `difference` between `Client Side Routing` and `Server Side Routing`?
 ---
-# Chapter 08 - Let's get Classy
+## 📚 [Chapter 08 - Let's get Classy](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2008%20-%20Let's%20get%20Classy)
 - How do you create `Nested Routes react-router-dom` configuration?
 - Read about `createHashRouter`, `createMemoryRouter` from React Router docs.
 - What is the `order of life cycle method calls` in `Class Based Components`?
@@ -127,10 +98,41 @@ own words.
 - (Research) Why do we use `super(props)` in `constructor`?
 - (Research) Why `can't we have` the `callback function` of `useEffect async`?
 ---
-# Chapter 09 - Optimizing our App
+## 📚 [Chapter 09 - Optimizing our App](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2009%20-%20Optimizing%20our%20app)
 - When and why do we need `lazy()`?
 - What is `suspense`?
 - Why we got this `error`: A component was suspended while responding to `synchronous input`. This will cause the `UI` to be replaced with a `loading indicator`. To `fix this`, `updates that suspend` should be wrapped with `start transition`? How does `suspense fix` this error?
 - `Advantages and Disadvantages` of using this `code splitting pattern`?
 - When `do we and why do we need suspense`?
+---
+## 📚 [Chapter 10 - Jo dikhta hai vo bikta hai](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2010%20-%20Jo%20Dikta%20hai%2C%20vo%20bikta%20hai)
+- Explore all the ways of writing css.
+- How do we configure tailwind?
+- In tailwind.config.js, what does all the keys mean (content, theme, extend,
+plugins)?
+- Why do we have .postcssrc file?
+
+---
+## 📚 [Chapter 11 - Data is the new Oil](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2011%20-%20Data%20is%20the%20new%20oil)
+- What is prop drilling?
+- What is lifting the state up?
+- What is Context Provider and Context Consumer?
+- If you don’t pass a value to the provider does it take the default value?
+---
+
+## 📚 [Chapter 12 - Let's Build our Store](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2012%20-%20Lets%20build%20our%20store)
+- useContext vs Redux.
+- Advantage of using Redux Toolkit over Redux.
+- Explain Dispatcher.
+- Explain Reducer.
+- Explain slice.
+- Explain selector.
+- Explain createSlice and the configuration it takes.
+---
+
+## 📚 [Chapter 13 - Time for the test](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2013%20-%20Time%20for%20the%20test)
+- What are different types for testing?
+- What is Enzyme?
+- Enzyme vs React Testing Library
+- What is Jest and why do we use it?
 ---
