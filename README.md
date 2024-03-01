@@ -2,10 +2,9 @@
 
 Namaste React course notes provide concise, hands-on insights into React development. Covering key concepts, components, and best practices, it's a valuable resource for mastering React.js efficiently.
 
-# React Interview Questions
-  This repository compiles all my react interview question preparations and their corresponding answers.
+# React Assignments
 
-# 📚 [Chapter 01 - Inception](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%2001%20-%20Inception)
+## 📚 [Chapter 01 - Inception](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%2001%20-%20Inception)
 - What is `Emmet`?
 - Difference between a `Library and Framework`?
 - What is `CDN`? Why do we `use` it?
