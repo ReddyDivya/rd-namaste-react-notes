@@ -105,33 +105,32 @@ own words.
 - When `do we and why do we need suspense`?
 ---
 ## 📚 [Chapter 10 - Jo dikhta hai vo bikta hai](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2010%20-%20Jo%20Dikta%20hai%2C%20vo%20bikta%20hai)
-- Explore all the ways of writing css.
-- How do we configure tailwind?
-- In tailwind.config.js, what does all the keys mean (content, theme, extend,
-plugins)?
-- Why do we have .postcssrc file?
+- Explore all the `ways of writing css`.
+- How do we `configure tailwind`?
+- In `tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)`?
+- Why do we have `.postcssrc file`?
 
 ---
 ## 📚 [Chapter 11 - Data is the new Oil](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2011%20-%20Data%20is%20the%20new%20oil)
-- What is prop drilling?
-- What is lifting the state up?
-- What is Context Provider and Context Consumer?
-- If you don’t pass a value to the provider does it take the default value?
+- What is `prop drilling`?
+- What is `lifting the state up`?
+- What is `Context Provider` and `Context Consumer`?
+- If you `don’t pass a value to the provider does it take the default value`?
 ---
 
 ## 📚 [Chapter 12 - Let's Build our Store](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2012%20-%20Lets%20build%20our%20store)
-- useContext vs Redux.
-- Advantage of using Redux Toolkit over Redux.
-- Explain Dispatcher.
-- Explain Reducer.
-- Explain slice.
-- Explain selector.
-- Explain createSlice and the configuration it takes.
+- `useContext` vs `Redux`.
+- Advantage of using `Redux Toolkit over Redux`.
+- Explain `Dispatcher`.
+- Explain `Reducer`.
+- Explain `slice`.
+- Explain `selector`.
+- Explain `createSlice` and the `configuration it takes`.
 ---
 
 ## 📚 [Chapter 13 - Time for the test](https://github.com/ReddyDivya/rd-namaste-react-notes/tree/main/Chapter%20-%2013%20-%20Time%20for%20the%20test)
-- What are different types for testing?
-- What is Enzyme?
-- Enzyme vs React Testing Library
-- What is Jest and why do we use it?
+- What are different types for `testing`?
+- What is `Enzyme`?
+- `Enzyme` vs `React Testing Library`
+- What is `Jest` and why do we `use it`?
 ---
